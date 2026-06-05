@@ -10,6 +10,6 @@ terraform {
 provider "local" {}
 
 resource "local_file" "example" {
-filename="hello.txt"
-content="Hello from Terraform CI/CD Lab!"
+  filename = "hello.txt"
+  content  = "Hello from Terraform CI/CD Lab!"
 }
