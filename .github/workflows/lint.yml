@@ -1,7 +1,7 @@
 name: Terraform Lint
 
 on:
-  push:
+  pull_request:
     branches:
       - main
 
@@ -30,6 +30,4 @@ jobs:
         uses: terraform-linters/setup-tflint@v4
 
       - name: Run TFLint
-        run: |
-          tflint --init
-          tflint
+        run: tflint --init && tflint
