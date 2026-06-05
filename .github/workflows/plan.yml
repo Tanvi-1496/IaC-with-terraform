@@ -19,4 +19,7 @@ jobs:
         run: terraform init
 
       - name: Terraform Plan
-        run: terraform plan
+        run: terraform plan -no-color -out=tfplan
+
+      - name: Show Plan Output
+        run: terraform show tfplan
